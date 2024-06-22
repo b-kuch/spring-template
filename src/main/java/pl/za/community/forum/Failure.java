@@ -32,8 +32,7 @@ public final class Failure<T, E> implements Result<T, E> {
 
     @Override
     public String toString() {
-        return "Failure[" +
-                "value=" + value + ']';
+        return "Failure[value=%s]".formatted(value);
     }
 
 }

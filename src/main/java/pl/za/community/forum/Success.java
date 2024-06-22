@@ -32,8 +32,7 @@ public final class Success<T, E> implements Result<T, E> {
 
     @Override
     public String toString() {
-        return "Success[" +
-                "value=" + value + ']';
+        return "Success[value=%s]".formatted(value);
     }
 
 }
