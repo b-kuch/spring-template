@@ -1,0 +1,11 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  r1-forum-user
+       author:  bkuch
+       changes:
+         -  createTable:
+              tableName:  forum_user
+              columns:
+                -  column:
+                     name:  id
+                     type:  varchar(255)
