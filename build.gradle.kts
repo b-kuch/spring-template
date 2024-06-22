@@ -30,6 +30,7 @@ dependencies {
 	implementation("net.ttddyy:datasource-proxy:1.10")
 	implementation("org.liquibase:liquibase-core")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	testImplementation("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.assertj:assertj-core:3.26.0")
 	testImplementation("org.instancio:instancio-junit:4.8.0")

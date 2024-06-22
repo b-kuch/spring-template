@@ -7,7 +7,11 @@ import org.springframework.boot.test.context.TestConfiguration;
 public class TestCommunityForumApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.from(CommunityForumApplication::main).with(TestCommunityForumApplication.class).run(args);
+		SpringApplication
+				.from(CommunityForumApplication::main)
+				.with(TestCommunityForumApplication.class)
+				.with(PostgresTestConfiguration.class)
+				.run(args);
 	}
 
 }
