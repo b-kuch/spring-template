@@ -1,4 +1,4 @@
-package pl.za.community.forum;
+package pl.za.community.forum.components.forumuser;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,6 +7,7 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
+import pl.za.community.forum.testsetup.DbTests;
 
 @SpringBootTest
 @DbTests

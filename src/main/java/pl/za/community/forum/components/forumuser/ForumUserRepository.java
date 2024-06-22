@@ -1,4 +1,4 @@
-package pl.za.community.forum;
+package pl.za.community.forum.components.forumuser;
 
 import io.hypersistence.utils.spring.repository.BaseJpaRepository;
 

@@ -1,4 +1,4 @@
-package pl.za.community.forum;
+package pl.za.community.forum.testsetup;
 
 
 import org.junit.jupiter.api.Tag;

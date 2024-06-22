@@ -1,4 +1,4 @@
-package pl.za.community.forum;
+package pl.za.community.forum.components.forumuser;
 
 import org.instancio.junit.InstancioSource;
 import org.junit.jupiter.params.ParameterizedTest;

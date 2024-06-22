@@ -1,4 +1,4 @@
-package pl.za.community.forum;
+package pl.za.community.forum.util.result;
 
 public sealed interface Result<T, E> permits Success, Failure {
     default T unwrap() {

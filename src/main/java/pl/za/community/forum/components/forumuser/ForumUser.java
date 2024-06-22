@@ -1,4 +1,4 @@
-package pl.za.community.forum;
+package pl.za.community.forum.components.forumuser;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
