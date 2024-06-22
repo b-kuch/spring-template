@@ -17,6 +17,7 @@ public final class Success<T, E> implements Result<T, E> {
         return value;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public boolean equals(Object obj) {
         if (obj == this) return true;
