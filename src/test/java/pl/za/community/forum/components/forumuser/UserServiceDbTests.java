@@ -2,6 +2,8 @@ package pl.za.community.forum.components.forumuser;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
@@ -11,11 +13,19 @@ import pl.za.community.forum.testsetup.DbTests;
 
 @SpringBootTest
 @DbTests
-public class UserServiceDbTests extends UserServiceTest {
+public class UserServiceDbTests extends UserServiceTests {
     @Container
     static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(
             "postgres:16-alpine"
     );
+
+    @Autowired
+    ForumUserService service;
+
+    @Override
+    protected ForumUserService supplyTestedService() {
+        return service;
+    }
 
     @BeforeAll
     static void beforeAll() {

@@ -1,21 +1,25 @@
 package pl.za.community.forum.components.forumuser;
 
 import org.instancio.junit.InstancioSource;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public abstract class UserServiceTest {
-    @Autowired
-    ForumUserService service;
+public class UserServiceTests {
+    private ForumUserService service;
+
+    @BeforeEach
+    void beforeEach() {
+        service = supplyTestedService();
+    }
 
     @InstancioSource
     @ParameterizedTest
-    void createShouldSaveUserWithSpecifiedName(String name) {
-        var result = service.createUser(new CreateForumUserCommand(name));
+    void createShouldSaveUserWithSpecifiedName(CreateForumUserCommand command) {
+        var result = service.createUser(command);
         var user = result.unwrap();
-        assertThat(user.getId()).isEqualTo(name);
+        assertThat(user.getId()).isEqualTo(command.username());
     }
 
     @InstancioSource
@@ -24,5 +28,9 @@ public abstract class UserServiceTest {
         service.createUser(command);
         var user = service.findUser(command.username());
         assertThat(user).isPresent();
+    }
+
+    protected ForumUserService supplyTestedService() {
+        return new ForumUserService(new InMemoryForumUserRepository());
     }
 }
