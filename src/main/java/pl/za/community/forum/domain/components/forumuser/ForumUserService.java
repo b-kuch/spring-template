@@ -19,7 +19,7 @@ public class ForumUserService {
         var user = forumUserRepository.persist(new ForumUser(command.username()));
         return Success.from(user);
     }
-    public Optional<ForumUser> findUser(String username) {
+    public Optional<ForumUser> findUser(ForumUserId username) {
         return forumUserRepository.findById(username);
     }
 }
