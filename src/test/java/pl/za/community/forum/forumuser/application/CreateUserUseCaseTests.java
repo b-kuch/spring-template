@@ -7,7 +7,7 @@ import pl.za.community.forum.forumuser.domain.CreateForumUserCommand;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UserServiceTests {
+public class CreateUserUseCaseTests {
     protected CreateForumUserUseCase createForumUserUseCase;
     protected FindUserUseCase findUserUseCase;
 

@@ -12,7 +12,7 @@ import pl.za.community.forum.testsetup.DbTests;
 
 @SpringBootTest
 @DbTests
-public class UserServiceDbTests extends UserServiceTests {
+public class CreateUserUseCaseDbTests extends CreateUserUseCaseTests {
     @Container
     @ServiceConnection
     static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(
