@@ -8,11 +8,14 @@ import pl.za.community.forum.forumuser.domain.CreateForumUserCommand;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UserServiceTests {
-    private ForumUserService service;
+    protected ForumUserService service;
+    protected FindUserUseCase findUserUseCase;
 
     @BeforeEach
     void beforeEach() {
-        service = supplyTestedService();
+        var repository = new InMemoryForumUserRepository();
+        service = new ForumUserService(repository);
+        findUserUseCase = new FindUserUseCase(repository);
     }
 
     @InstancioSource
@@ -27,11 +30,7 @@ public class UserServiceTests {
     @ParameterizedTest
     void createShouldPersistUser(CreateForumUserCommand command) {
         var user = service.createUser(command);
-        var foundUser = service.findUser(user.unwrap().getId());
+        var foundUser = findUserUseCase.findUser(user.unwrap().getId());
         assertThat(foundUser).isPresent();
-    }
-
-    protected ForumUserService supplyTestedService() {
-        return new ForumUserService(new InMemoryForumUserRepository());
     }
 }

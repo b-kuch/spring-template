@@ -2,6 +2,7 @@ package pl.za.community.forum.forumuser.application;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
@@ -21,10 +22,14 @@ public class UserServiceDbTests extends UserServiceTests {
     @Autowired
     ForumUserService service;
 
-    @Override
-    protected ForumUserService supplyTestedService() {
+    @Autowired
+    FindUserUseCase findUserUseCase;
+
+    @BeforeEach
+    void beforeEach() {
         // todo entities should be deleted
-        return service;
+        super.service = this.service;
+        super.findUserUseCase = this.findUserUseCase;
     }
 
     @BeforeAll
