@@ -8,4 +8,7 @@ databaseChangeLog:
               columns:
                 -  column:
                      name:  id
+                     type:  bigint
+                -  column:
+                     name:  username
                      type:  varchar(255)

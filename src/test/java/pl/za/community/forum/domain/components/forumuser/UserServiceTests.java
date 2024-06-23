@@ -19,15 +19,15 @@ public class UserServiceTests {
     void createShouldSaveUserWithSpecifiedName(CreateForumUserCommand command) {
         var result = service.createUser(command);
         var user = result.unwrap();
-        assertThat(user.getId()).isEqualTo(command.username());
+        assertThat(user.getUsername()).isEqualTo(command.username());
     }
 
     @InstancioSource
     @ParameterizedTest
     void createShouldPersistUser(CreateForumUserCommand command) {
-        service.createUser(command);
-        var user = service.findUser(command.username());
-        assertThat(user).isPresent();
+        var user = service.createUser(command);
+        var foundUser = service.findUser(user.unwrap().getId());
+        assertThat(foundUser).isPresent();
     }
 
     protected ForumUserService supplyTestedService() {
