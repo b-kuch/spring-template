@@ -1,9 +1,9 @@
-package pl.za.community.forum.domain.components.forumuser;
+package pl.za.community.forum.forumuser.domain;
 
 import jakarta.persistence.Embedded;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import pl.za.community.forum.domain.components.util.domaintypes.DomainEntity;
+import pl.za.community.forum.domainblocks.DomainEntity;
 
 @Entity
 public class ForumUser implements DomainEntity<ForumUserId> {

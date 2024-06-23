@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.test.util.ReflectionTestUtils;
-import pl.za.community.forum.domain.components.util.domaintypes.DomainEntity;
+import pl.za.community.forum.domainblocks.DomainEntity;
 
 import java.io.Serializable;
 import java.util.*;

@@ -1,4 +1,4 @@
-package pl.za.community.forum.domain.components.forumuser;
+package pl.za.community.forum.forumuser.domain;
 
 import io.hypersistence.tsid.TSID;
 import jakarta.persistence.Column;

@@ -1,4 +1,4 @@
-package pl.za.community.forum.domain.components.util.domaintypes;
+package pl.za.community.forum.domainblocks;
 
 import java.io.Serializable;
 
