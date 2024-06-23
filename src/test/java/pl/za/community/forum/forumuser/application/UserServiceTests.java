@@ -1,8 +1,9 @@
-package pl.za.community.forum.forumuser.domain;
+package pl.za.community.forum.forumuser.application;
 
 import org.instancio.junit.InstancioSource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
+import pl.za.community.forum.forumuser.domain.CreateForumUserCommand;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
