@@ -1,8 +1,8 @@
-package pl.za.community.forum.components.forumuser;
+package pl.za.community.forum.domain.components.forumuser;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import pl.za.community.forum.components.util.domaintypes.DomainEntity;
+import pl.za.community.forum.domain.components.util.domaintypes.DomainEntity;
 
 @Entity
 public class ForumUser implements DomainEntity<String> {

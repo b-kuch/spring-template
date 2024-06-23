@@ -1,4 +1,4 @@
-package pl.za.community.forum.components.forumuser;
+package pl.za.community.forum.domain.components.forumuser;
 
 import org.instancio.junit.InstancioSource;
 import org.junit.jupiter.api.BeforeEach;

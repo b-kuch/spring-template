@@ -3,7 +3,7 @@ package pl.za.community.forum.testsetup;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import pl.za.community.forum.components.util.domaintypes.DomainEntity;
+import pl.za.community.forum.domain.components.util.domaintypes.DomainEntity;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

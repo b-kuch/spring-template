@@ -1,4 +1,4 @@
-package pl.za.community.forum.components.forumuser;
+package pl.za.community.forum.domain.components.forumuser;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
