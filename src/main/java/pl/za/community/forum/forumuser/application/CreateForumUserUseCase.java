@@ -8,15 +8,15 @@ import pl.za.community.forum.util.result.Result;
 import pl.za.community.forum.util.result.Success;
 
 @Service
-public class ForumUserService {
+public class CreateForumUserUseCase {
 
     private final ForumUserRepository forumUserRepository;
 
-    ForumUserService(ForumUserRepository forumUserRepository) {
+    CreateForumUserUseCase(ForumUserRepository forumUserRepository) {
         this.forumUserRepository = forumUserRepository;
     }
 
-    public Result<ForumUser, ?> createUser(CreateForumUserCommand command) {
+    public Result<ForumUser, ?> execute(CreateForumUserCommand command) {
         var user = forumUserRepository.persist(new ForumUser(command.username()));
         return Success.from(user);
     }

@@ -20,7 +20,7 @@ public class UserServiceDbTests extends UserServiceTests {
     );
 
     @Autowired
-    ForumUserService service;
+    CreateForumUserUseCase createForumUserUseCase;
 
     @Autowired
     FindUserUseCase findUserUseCase;
@@ -28,7 +28,7 @@ public class UserServiceDbTests extends UserServiceTests {
     @BeforeEach
     void beforeEach() {
         // todo entities should be deleted
-        super.service = this.service;
+        super.createForumUserUseCase = this.createForumUserUseCase;
         super.findUserUseCase = this.findUserUseCase;
     }
 
