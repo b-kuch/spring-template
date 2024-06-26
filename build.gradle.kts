@@ -29,6 +29,7 @@ dependencies {
 	implementation("io.hypersistence:hypersistence-utils-hibernate-63:3.7.7")
 	implementation("net.ttddyy:datasource-proxy:1.10")
 	implementation("org.liquibase:liquibase-core")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
